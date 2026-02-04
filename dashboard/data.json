@@ -1,69 +1,84 @@
 {
-  "timestamp": 1770168336870,
+  "timestamp": 1770168973854,
   "cj_status": {
-    "activity": "Enhancing dashboard insights",
-    "details": "Adding detailed agent status (names, health, what each bot is doing), richer activity context, and better real-time updates. Jason asked for more insights - delivering them.",
-    "alert_type": "working",
+    "state": "processing",
+    "task": "Building chat portal for dashboard",
+    "activity": "Building chat portal for dashboard",
+    "details": null,
+    "alert_type": "success",
+    "plan": {
+      "current": "Chat Portal Development",
+      "goal": "Enable direct chat with CJ from dashboard",
+      "progress": "Phase 1 of 3",
+      "phase": "Building UI component",
+      "next": "Create backend proxy, then wire up real-time messaging",
+      "why": "Jason wants to chat directly from dashboard instead of switching to Telegram. Fills empty space and adds major functionality."
+    },
+    "thinking": "Need: (1) Chat UI with message history and input, (2) Backend server to proxy messages to Clawdbot, (3) Polling or WebSocket for real-time responses. Starting with UI first.",
     "stats": {
-      "Active Bots": "5 running",
-      "Total Tokens": "247k",
-      "Uptime": "4 hours",
-      "Tasks Today": "23 completed",
-      "Auto-Updates": "Every 2.5min",
-      "Health": "All systems ✅"
+      "🤖 Bots": "5 active",
+      "💬 Tokens": "122k",
+      "⏱️ Uptime": "4h 35m",
+      "✅ Health": "All systems operational"
     }
   },
   "agents": [
     {
-      "name": "🤖 CJ (Main)",
-      "status": "Active - responding to Jason",
-      "health": "healthy",
-      "tokens": "85.7k tokens",
-      "lastActive": "Just now",
-      "details": "Primary consciousness, managing automation infrastructure"
+      "name": "CJ",
+      "icon": "🤖",
+      "status": "Active",
+      "state": "active",
+      "doing": "Awaiting deployment"
     },
     {
-      "name": "📊 Dashboard Updater",
-      "status": "Running - pushes every 2.5 minutes",
-      "health": "healthy",
-      "tokens": "15.8k tokens",
-      "lastActive": "24 minutes ago",
-      "details": "Auto-commits and deploys fresh dashboard data to Vercel"
+      "name": "Dashboard Updater",
+      "icon": "📊",
+      "status": "Running",
+      "state": "active",
+      "doing": "Auto-push every 2.5min"
     },
     {
-      "name": "✅ Verification Bot",
-      "status": "Monitoring deployments",
-      "health": "healthy",
-      "tokens": "21.0k tokens",
-      "lastActive": "4 minutes ago",
-      "details": "Checks live URLs after every deployment, prevents 'said done but didn't verify' failures"
+      "name": "Verification Bot",
+      "icon": "✅",
+      "status": "Monitoring",
+      "state": "active",
+      "doing": "Checks URLs after deploy"
     },
     {
-      "name": "📝 Activity Tracker",
-      "status": "Watching for actions",
-      "health": "healthy",
-      "tokens": "21.9k tokens",
-      "lastActive": "2 minutes ago",
-      "details": "Auto-logs all file ops, commands, decisions to recent-thoughts.json"
+      "name": "Activity Tracker",
+      "icon": "📝",
+      "status": "Watching",
+      "state": "active",
+      "doing": "Logs all actions"
     },
     {
-      "name": "🔍 Memory Assistant",
-      "status": "Searching before asking",
-      "health": "healthy",
-      "tokens": "27.9k tokens",
-      "lastActive": "1 minute ago",
-      "details": "Scans credentials and memory files before CJ asks Jason for anything"
+      "name": "Memory Assistant",
+      "icon": "🔍",
+      "status": "Ready",
+      "state": "active",
+      "doing": "Searches before asking"
     },
     {
-      "name": "🛡️ Session Watchdog",
-      "status": "Monitoring for crashes",
-      "health": "healthy",
-      "tokens": "74.6k tokens",
-      "lastActive": "3 minutes ago",
-      "details": "Scans all sessions every 60s, attempts auto-recovery on failures"
+      "name": "Session Watchdog",
+      "icon": "🛡️",
+      "status": "Monitoring",
+      "state": "active",
+      "doing": "Watches for crashes"
     }
   ],
   "thoughts": [
+    {
+      "timestamp": 1770168764156,
+      "text": "Expanded CJ Status per Jason request - now shows Current Plan (goal/phase/next), Progress tracker, Current Thinking, and Why (reasoning). Full visibility into decision-making process."
+    },
+    {
+      "timestamp": 1770168663844,
+      "text": "Balanced dashboard spacing per Jason feedback. Was too compact - increased padding, larger text, better breathing room. Stats grid adapts to space, agent cards more readable."
+    },
+    {
+      "timestamp": 1770168515673,
+      "text": "Redesigned dashboard for clarity: CJ Status shows state badge (Active/Idle/Crashed) with one-line task. Agents are compact single-line cards. Eliminated wasted space, much more scannable."
+    },
     {
       "timestamp": 1770168222053,
       "text": "Enhanced dashboard with detailed agent insights: Each bot now shows name, health status, what it is doing, token usage, and last active time. CJ Status includes metrics on automation savings (manual work eliminated)."
@@ -91,18 +106,6 @@
     {
       "timestamp": 1770166015984,
       "text": "Jason identified dashboard issues: Token usage showing identical numbers for 24h/7d/30d (broken), fake metrics (0h uptime, 100% success), activity feed 3 hours stale. The display works but data collection is broken."
-    },
-    {
-      "timestamp": 1770166015984,
-      "text": "Fixed memory modal - files now include full content, modal displays without backend fetch. Fixed agent token data structure (was nested object, now proper array)."
-    },
-    {
-      "timestamp": 1770162933878,
-      "text": "BREAKTHROUGH: Jason found the root cause - Vercel Git integration wasn't properly connected! Dashboard was returning 404s because files weren't in /public folder. Moved dashboard to /public/dashboard/ where Vercel serves static files automatically. Auto-deploy should work now. Testing after deployment completes."
-    },
-    {
-      "timestamp": 1770162129803,
-      "text": "Jason wants voice chat portal embedded in dashboard - excellent idea! Plan: Web Audio API for recording, send to Clawdbot backend, get response as TTS audio, play back with live transcription. Real-time conversation interface. Estimate 2-3 hours to build working prototype."
     }
   ],
   "memory_files": [
