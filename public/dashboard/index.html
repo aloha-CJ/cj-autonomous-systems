@@ -410,7 +410,7 @@
             let html = '<div class="grid">';
             
             // CJ Status Card
-            // CJ Status - Compact
+            // CJ Status
             const stateColors = {
                 active: '#4caf50',
                 processing: '#00bcd4', 
@@ -424,20 +424,20 @@
                 <div class="card">
                     <div class="card-title">
                         🤖 CJ Status
-                        <span style="background: ${stateColor}20; color: ${stateColor}; padding: 4px 12px; border-radius: 12px; font-size: 0.75em; margin-left: 8px; text-transform: uppercase; font-weight: 600;">
+                        <span style="background: ${stateColor}20; color: ${stateColor}; padding: 6px 14px; border-radius: 12px; font-size: 0.8em; margin-left: 10px; text-transform: uppercase; font-weight: 600;">
                             ${state}
                         </span>
                     </div>
                     <div class="card-content">
-                        <div style="color: #e3f2fd; margin-bottom: 16px; font-size: 0.95em;">
+                        <div style="color: #e3f2fd; margin-bottom: 20px; font-size: 1em; line-height: 1.5;">
                             ${data.cj_status.task || data.cj_status.activity}
                         </div>
                         ${data.cj_status.stats ? `
-                        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; font-size: 0.85em;">
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; font-size: 0.9em;">
                             ${Object.entries(data.cj_status.stats).map(([key, value]) => `
-                                <div style="background: rgba(0,188,212,0.1); padding: 8px 12px; border-radius: 6px;">
-                                    <span style="color: #81d4fa;">${key}</span>
-                                    <span style="color: #fff; margin-left: 8px; font-weight: 600;">${value}</span>
+                                <div style="background: rgba(0,188,212,0.1); padding: 12px 16px; border-radius: 8px; border-left: 3px solid ${stateColor};">
+                                    <div style="color: #81d4fa; font-size: 0.85em; margin-bottom: 4px;">${key}</div>
+                                    <div style="color: #fff; font-size: 1.1em; font-weight: 600;">${value}</div>
                                 </div>
                             `).join('')}
                         </div>
@@ -446,22 +446,22 @@
                 </div>
             `;
             
-            // Active Agents - Compact
+            // Active Agents
             html += `
                 <div class="card">
                     <div class="card-title">⚡ Active Agents <span style="color: #81d4fa; font-size: 0.8em; font-weight: normal;">(${data.agents.length})</span></div>
-                    <div class="card-content" style="display: flex; flex-direction: column; gap: 8px;">
+                    <div class="card-content" style="display: flex; flex-direction: column; gap: 12px;">
                         ${data.agents.length === 0 ? '<p style="color: #b3e5fc;">No agents</p>' : ''}
                         ${data.agents.map(agent => {
                             const agentStateColor = stateColors[agent.state] || '#00bcd4';
                             return `
-                                <div style="display: flex; align-items: center; gap: 12px; padding: 8px 12px; background: rgba(0,188,212,0.05); border-left: 3px solid ${agentStateColor}; border-radius: 4px;">
-                                    <span style="font-size: 1.2em;">${agent.icon}</span>
+                                <div style="display: flex; align-items: center; gap: 14px; padding: 12px 16px; background: rgba(0,188,212,0.05); border-left: 3px solid ${agentStateColor}; border-radius: 6px;">
+                                    <span style="font-size: 1.5em;">${agent.icon}</span>
                                     <div style="flex: 1;">
-                                        <div style="color: #fff; font-weight: 600; font-size: 0.9em;">${agent.name}</div>
-                                        <div style="color: #81d4fa; font-size: 0.75em;">${agent.doing}</div>
+                                        <div style="color: #fff; font-weight: 600; font-size: 0.95em; margin-bottom: 4px;">${agent.name}</div>
+                                        <div style="color: #81d4fa; font-size: 0.8em;">${agent.doing}</div>
                                     </div>
-                                    <div style="color: ${agentStateColor}; font-size: 0.75em; text-transform: uppercase; font-weight: 600;">
+                                    <div style="color: ${agentStateColor}; font-size: 0.8em; text-transform: uppercase; font-weight: 600; padding: 4px 10px; background: ${agentStateColor}20; border-radius: 8px;">
                                         ${agent.status}
                                     </div>
                                 </div>
