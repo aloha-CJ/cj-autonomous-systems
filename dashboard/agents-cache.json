@@ -1,15 +1,54 @@
 {
-  "timestamp": "2026-02-04T00:34:47.514Z",
-  "lastCheckFirst": "2026-02-04T00:34:47.516Z",
+  "timestamp": "2026-02-04T01:22:45.000Z",
+  "lastCheckFirst": "2026-02-04T01:22:45.000Z",
   "agents": [
     {
-      "key": "agent:main:main",
-      "kind": "other",
-      "channel": "telegram",
-      "displayName": "telegram:g-agent-main-main",
-      "model": "claude-sonnet-4-5",
-      "totalTokens": 29162,
-      "lastActive": "2026-02-04T00:34:14.065Z"
+      "name": "🤖 CJ (Main)",
+      "status": "Active - responding to Jason",
+      "health": "healthy",
+      "tokens": "85.7k tokens",
+      "lastActive": "Just now",
+      "details": "Primary consciousness, managing automation infrastructure"
+    },
+    {
+      "name": "📊 Dashboard Updater",
+      "status": "Running - pushes every 2.5 minutes",
+      "health": "healthy",
+      "tokens": "15.8k tokens",
+      "lastActive": "24 minutes ago",
+      "details": "Auto-commits and deploys fresh dashboard data to Vercel"
+    },
+    {
+      "name": "✅ Verification Bot",
+      "status": "Monitoring deployments",
+      "health": "healthy",
+      "tokens": "21.0k tokens",
+      "lastActive": "4 minutes ago",
+      "details": "Checks live URLs after every deployment, prevents 'said done but didn't verify' failures"
+    },
+    {
+      "name": "📝 Activity Tracker",
+      "status": "Watching for actions",
+      "health": "healthy",
+      "tokens": "21.9k tokens",
+      "lastActive": "2 minutes ago",
+      "details": "Auto-logs all file ops, commands, decisions to recent-thoughts.json"
+    },
+    {
+      "name": "🔍 Memory Assistant",
+      "status": "Searching before asking",
+      "health": "healthy",
+      "tokens": "27.9k tokens",
+      "lastActive": "1 minute ago",
+      "details": "Scans credentials and memory files before CJ asks Jason for anything"
+    },
+    {
+      "name": "🛡️ Session Watchdog",
+      "status": "Monitoring for crashes",
+      "health": "healthy",
+      "tokens": "74.6k tokens",
+      "lastActive": "3 minutes ago",
+      "details": "Scans all sessions every 60s, attempts auto-recovery on failures"
     }
   ]
 }
