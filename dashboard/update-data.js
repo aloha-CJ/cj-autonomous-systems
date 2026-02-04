@@ -52,6 +52,8 @@ function getCJStatus() {
                 activity: activity.task || 'Idle',
                 details: activity.details || null,
                 alert_type: activity.type || 'success',
+                plan: activity.plan || null,
+                thinking: activity.thinking || null,
                 stats: activity.stats || null
             };
         }
@@ -65,6 +67,8 @@ function getCJStatus() {
         activity: 'Idle',
         details: 'Waiting for tasks',
         alert_type: 'success',
+        plan: null,
+        thinking: null,
         stats: null
     };
 }
