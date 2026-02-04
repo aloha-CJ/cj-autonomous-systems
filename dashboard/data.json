@@ -1,5 +1,5 @@
 {
-  "timestamp": 1770166975089,
+  "timestamp": 1770167126322,
   "cj_status": {
     "activity": "Spawned dashboard-updater bot to automate updates",
     "details": "Finally using agents! Bot will handle git push/deploy cycle every 2-3 minutes instead of me doing it manually.",
@@ -12,8 +12,19 @@
       "channel": "telegram",
       "displayName": "telegram:g-agent-main-main",
       "model": "claude-sonnet-4-5",
-      "totalTokens": 29162,
-      "lastActive": "2026-02-04T00:34:14.065Z"
+      "totalTokens": 70431,
+      "lastActive": "2026-02-04T01:04:14.084Z"
+    },
+    {
+      "key": "agent:main:subagent:6fc65969-43c4-456e-94fe-7de28d43641d",
+      "kind": "other",
+      "channel": "telegram",
+      "label": "dashboard-updater",
+      "displayName": "Dashboard Auto-Updater Bot",
+      "model": "claude-sonnet-4-5",
+      "totalTokens": 15847,
+      "lastActive": "2026-02-04T00:58:14.689Z",
+      "status": "Running - updates every 2.5min"
     }
   ],
   "thoughts": [
