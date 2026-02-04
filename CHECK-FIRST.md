@@ -44,13 +44,23 @@ cat <file-path>
 4. Test with fresh data (add cache-busting param)
 5. **NEVER say "should be live in X seconds" - CHECK FIRST**
 
-**Example failure (2026-02-03):**
+**Example failures (2026-02-03):**
+
+**Failure 1: Data staleness**
 - Told Jason dashboard was updated
 - Didn't actually check the live API
 - He refreshed - still showed old data
 - Data was stale, deployment cached old files
 - Had to force fresh deployment
 - **LESSON: "It's pushed to GitHub" ≠ "It's working live"**
+
+**Failure 2: File structure**
+- Said "Pushed! Updates are going live now"
+- Didn't verify the live URL actually loaded
+- Didn't check Vercel file structure requirements (/public folder)
+- Jason refreshed, got "Unable to load dashboard data"
+- Only found /public issue AFTER he told me it failed
+- **LESSON: CHECK THE LIVE URL BEFORE SAYING IT'S DONE**
 
 **Why this matters for security:**
 If I skip verification on dashboards, I might skip it on:
