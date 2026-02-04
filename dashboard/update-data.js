@@ -49,7 +49,8 @@ function getCJStatus() {
             return {
                 activity: activity.task || 'Idle',
                 details: activity.details || null,
-                alert_type: activity.type || 'success'
+                alert_type: activity.type || 'success',
+                stats: activity.stats || null
             };
         }
     } catch (err) {
@@ -59,7 +60,8 @@ function getCJStatus() {
     return {
         activity: 'Monitoring',
         details: 'Ready for tasks',
-        alert_type: 'success'
+        alert_type: 'success',
+        stats: null
     };
 }
 

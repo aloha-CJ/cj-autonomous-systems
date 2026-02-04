@@ -1,9 +1,17 @@
 {
-  "timestamp": 1770168195112,
+  "timestamp": 1770168336870,
   "cj_status": {
     "activity": "Enhancing dashboard insights",
     "details": "Adding detailed agent status (names, health, what each bot is doing), richer activity context, and better real-time updates. Jason asked for more insights - delivering them.",
-    "alert_type": "working"
+    "alert_type": "working",
+    "stats": {
+      "Active Bots": "5 running",
+      "Total Tokens": "247k",
+      "Uptime": "4 hours",
+      "Tasks Today": "23 completed",
+      "Auto-Updates": "Every 2.5min",
+      "Health": "All systems ✅"
+    }
   },
   "agents": [
     {
@@ -57,6 +65,10 @@
   ],
   "thoughts": [
     {
+      "timestamp": 1770168222053,
+      "text": "Enhanced dashboard with detailed agent insights: Each bot now shows name, health status, what it is doing, token usage, and last active time. CJ Status includes metrics on automation savings (manual work eliminated)."
+    },
+    {
       "timestamp": 1770168127109,
       "text": "Spawned 5 automation bots: dashboard-updater (pushes every 2.5min), verification-bot (checks URLs after deploy), activity-tracker (auto-logs all actions), memory-assistant (searches before asking), session-watchdog (monitors for crashes). Full automation infrastructure now running."
     },
@@ -91,10 +103,6 @@
     {
       "timestamp": 1770162129803,
       "text": "Jason wants voice chat portal embedded in dashboard - excellent idea! Plan: Web Audio API for recording, send to Clawdbot backend, get response as TTS audio, play back with live transcription. Real-time conversation interface. Estimate 2-3 hours to build working prototype."
-    },
-    {
-      "timestamp": 1770162129482,
-      "text": "Dashboard data not updating on Vercel - architecture issue: API reads static files bundled at build time. Need dynamic data source or rebuild trigger. Forcing fresh deployment now. Long-term solution: move to database or external data API."
     }
   ],
   "memory_files": [

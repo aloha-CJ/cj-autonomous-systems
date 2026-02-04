@@ -413,16 +413,26 @@
             html += `
                 <div class="card">
                     <div class="card-title">🤖 CJ Status</div>
-                    <div class="card-content">
-                        <div class="stat-row">
-                            <span class="stat-label">Current Activity</span>
-                            <span class="stat-value">${data.cj_status.activity}</span>
+                    <div class="card-content" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <div style="padding-right: 20px; border-right: 1px solid rgba(0, 188, 212, 0.2);">
+                            ${data.cj_status.stats ? Object.entries(data.cj_status.stats).map(([key, value]) => `
+                                <div style="margin-bottom: 12px;">
+                                    <div style="color: #81d4fa; font-size: 0.85em; margin-bottom: 4px;">${key}</div>
+                                    <div style="color: #fff; font-size: 1.1em; font-weight: 600;">${value}</div>
+                                </div>
+                            `).join('') : '<p style="color: #b3e5fc;">No stats available</p>'}
                         </div>
-                        ${data.cj_status.details ? `
-                        <div class="alert ${data.cj_status.alert_type || ''}">
-                            ${data.cj_status.details}
+                        <div>
+                            <div class="stat-row">
+                                <span class="stat-label">Current Activity</span>
+                                <span class="stat-value">${data.cj_status.activity}</span>
+                            </div>
+                            ${data.cj_status.details ? `
+                            <div class="alert ${data.cj_status.alert_type || ''}" style="margin-top: 12px;">
+                                ${data.cj_status.details}
+                            </div>
+                            ` : ''}
                         </div>
-                        ` : ''}
                     </div>
                 </div>
             `;

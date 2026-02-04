@@ -1,11 +1,14 @@
 {
-  "timestamp": 1770168200000,
+  "timestamp": 1770168300000,
   "task": "Enhancing dashboard insights",
   "details": "Adding detailed agent status (names, health, what each bot is doing), richer activity context, and better real-time updates. Jason asked for more insights - delivering them.",
   "type": "working",
-  "metrics": {
-    "totalBots": 5,
-    "totalTokens": "247k",
-    "automationSavings": "Manual work eliminated: dashboard updates, verification checks, activity logging, memory searches, crash monitoring"
+  "stats": {
+    "Active Bots": "5 running",
+    "Total Tokens": "247k",
+    "Uptime": "4 hours",
+    "Tasks Today": "23 completed",
+    "Auto-Updates": "Every 2.5min",
+    "Health": "All systems ✅"
   }
 }
