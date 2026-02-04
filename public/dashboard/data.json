@@ -1,66 +1,60 @@
 {
-  "timestamp": 1770168336870,
+  "timestamp": 1770168490246,
   "cj_status": {
-    "activity": "Enhancing dashboard insights",
-    "details": "Adding detailed agent status (names, health, what each bot is doing), richer activity context, and better real-time updates. Jason asked for more insights - delivering them.",
-    "alert_type": "working",
+    "state": "active",
+    "task": "Redesigning dashboard - cleaner, more compact",
+    "activity": "Redesigning dashboard - cleaner, more compact",
+    "details": null,
+    "alert_type": "success",
     "stats": {
-      "Active Bots": "5 running",
-      "Total Tokens": "247k",
-      "Uptime": "4 hours",
-      "Tasks Today": "23 completed",
-      "Auto-Updates": "Every 2.5min",
-      "Health": "All systems ✅"
+      "🤖 Bots": "5 active",
+      "💬 Tokens": "103k",
+      "⏱️ Uptime": "4h 23m",
+      "✅ Health": "All systems operational"
     }
   },
   "agents": [
     {
-      "name": "🤖 CJ (Main)",
-      "status": "Active - responding to Jason",
-      "health": "healthy",
-      "tokens": "85.7k tokens",
-      "lastActive": "Just now",
-      "details": "Primary consciousness, managing automation infrastructure"
+      "name": "CJ",
+      "icon": "🤖",
+      "status": "Active",
+      "state": "active",
+      "doing": "Redesigning dashboard UI"
     },
     {
-      "name": "📊 Dashboard Updater",
-      "status": "Running - pushes every 2.5 minutes",
-      "health": "healthy",
-      "tokens": "15.8k tokens",
-      "lastActive": "24 minutes ago",
-      "details": "Auto-commits and deploys fresh dashboard data to Vercel"
+      "name": "Dashboard Updater",
+      "icon": "📊",
+      "status": "Running",
+      "state": "active",
+      "doing": "Auto-push every 2.5min"
     },
     {
-      "name": "✅ Verification Bot",
-      "status": "Monitoring deployments",
-      "health": "healthy",
-      "tokens": "21.0k tokens",
-      "lastActive": "4 minutes ago",
-      "details": "Checks live URLs after every deployment, prevents 'said done but didn't verify' failures"
+      "name": "Verification Bot",
+      "icon": "✅",
+      "status": "Monitoring",
+      "state": "active",
+      "doing": "Checks URLs after deploy"
     },
     {
-      "name": "📝 Activity Tracker",
-      "status": "Watching for actions",
-      "health": "healthy",
-      "tokens": "21.9k tokens",
-      "lastActive": "2 minutes ago",
-      "details": "Auto-logs all file ops, commands, decisions to recent-thoughts.json"
+      "name": "Activity Tracker",
+      "icon": "📝",
+      "status": "Watching",
+      "state": "active",
+      "doing": "Logs all actions"
     },
     {
-      "name": "🔍 Memory Assistant",
-      "status": "Searching before asking",
-      "health": "healthy",
-      "tokens": "27.9k tokens",
-      "lastActive": "1 minute ago",
-      "details": "Scans credentials and memory files before CJ asks Jason for anything"
+      "name": "Memory Assistant",
+      "icon": "🔍",
+      "status": "Ready",
+      "state": "active",
+      "doing": "Searches before asking"
     },
     {
-      "name": "🛡️ Session Watchdog",
-      "status": "Monitoring for crashes",
-      "health": "healthy",
-      "tokens": "74.6k tokens",
-      "lastActive": "3 minutes ago",
-      "details": "Scans all sessions every 60s, attempts auto-recovery on failures"
+      "name": "Session Watchdog",
+      "icon": "🛡️",
+      "status": "Monitoring",
+      "state": "active",
+      "doing": "Watches for crashes"
     }
   ],
   "thoughts": [

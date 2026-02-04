@@ -410,45 +410,63 @@
             let html = '<div class="grid">';
             
             // CJ Status Card
+            // CJ Status - Compact
+            const stateColors = {
+                active: '#4caf50',
+                processing: '#00bcd4', 
+                idle: '#ff9800',
+                crashed: '#f44336'
+            };
+            const state = data.cj_status?.state || 'active';
+            const stateColor = stateColors[state];
+            
             html += `
                 <div class="card">
-                    <div class="card-title">🤖 CJ Status</div>
-                    <div class="card-content" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                        <div style="padding-right: 20px; border-right: 1px solid rgba(0, 188, 212, 0.2);">
-                            ${data.cj_status.stats ? Object.entries(data.cj_status.stats).map(([key, value]) => `
-                                <div style="margin-bottom: 12px;">
-                                    <div style="color: #81d4fa; font-size: 0.85em; margin-bottom: 4px;">${key}</div>
-                                    <div style="color: #fff; font-size: 1.1em; font-weight: 600;">${value}</div>
+                    <div class="card-title">
+                        🤖 CJ Status
+                        <span style="background: ${stateColor}20; color: ${stateColor}; padding: 4px 12px; border-radius: 12px; font-size: 0.75em; margin-left: 8px; text-transform: uppercase; font-weight: 600;">
+                            ${state}
+                        </span>
+                    </div>
+                    <div class="card-content">
+                        <div style="color: #e3f2fd; margin-bottom: 16px; font-size: 0.95em;">
+                            ${data.cj_status.task || data.cj_status.activity}
+                        </div>
+                        ${data.cj_status.stats ? `
+                        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; font-size: 0.85em;">
+                            ${Object.entries(data.cj_status.stats).map(([key, value]) => `
+                                <div style="background: rgba(0,188,212,0.1); padding: 8px 12px; border-radius: 6px;">
+                                    <span style="color: #81d4fa;">${key}</span>
+                                    <span style="color: #fff; margin-left: 8px; font-weight: 600;">${value}</span>
                                 </div>
-                            `).join('') : '<p style="color: #b3e5fc;">No stats available</p>'}
+                            `).join('')}
                         </div>
-                        <div>
-                            <div class="stat-row">
-                                <span class="stat-label">Current Activity</span>
-                                <span class="stat-value">${data.cj_status.activity}</span>
-                            </div>
-                            ${data.cj_status.details ? `
-                            <div class="alert ${data.cj_status.alert_type || ''}" style="margin-top: 12px;">
-                                ${data.cj_status.details}
-                            </div>
-                            ` : ''}
-                        </div>
+                        ` : ''}
                     </div>
                 </div>
             `;
             
-            // Active Agents Card
+            // Active Agents - Compact
             html += `
                 <div class="card">
-                    <div class="card-title">⚡ Active Agents</div>
-                    <div class="card-content">
-                        ${data.agents.length === 0 ? '<p style="color: #b3e5fc;">No active sub-agents</p>' : ''}
-                        ${data.agents.map(agent => `
-                            <div class="agent-item">
-                                <div class="agent-name">${agent.name}</div>
-                                <div class="agent-status">${agent.status}</div>
-                            </div>
-                        `).join('')}
+                    <div class="card-title">⚡ Active Agents <span style="color: #81d4fa; font-size: 0.8em; font-weight: normal;">(${data.agents.length})</span></div>
+                    <div class="card-content" style="display: flex; flex-direction: column; gap: 8px;">
+                        ${data.agents.length === 0 ? '<p style="color: #b3e5fc;">No agents</p>' : ''}
+                        ${data.agents.map(agent => {
+                            const agentStateColor = stateColors[agent.state] || '#00bcd4';
+                            return `
+                                <div style="display: flex; align-items: center; gap: 12px; padding: 8px 12px; background: rgba(0,188,212,0.05); border-left: 3px solid ${agentStateColor}; border-radius: 4px;">
+                                    <span style="font-size: 1.2em;">${agent.icon}</span>
+                                    <div style="flex: 1;">
+                                        <div style="color: #fff; font-weight: 600; font-size: 0.9em;">${agent.name}</div>
+                                        <div style="color: #81d4fa; font-size: 0.75em;">${agent.doing}</div>
+                                    </div>
+                                    <div style="color: ${agentStateColor}; font-size: 0.75em; text-transform: uppercase; font-weight: 600;">
+                                        ${agent.status}
+                                    </div>
+                                </div>
+                            `;
+                        }).join('')}
                     </div>
                 </div>
             `;
