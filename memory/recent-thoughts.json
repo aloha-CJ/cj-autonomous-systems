@@ -130,5 +130,9 @@
   {
     "timestamp": 1770166015984,
     "text": "Acknowledged the core problem: Built display infrastructure without data collection infrastructure. Not logging activities as I work, only showing reconstructed historical data. Need real-time activity logging and proper token tracking over time windows."
+  },
+  {
+    "timestamp": 1770166138205,
+    "text": "Pushed dashboard updates to GitHub. Fixed git security issue (removed credentials from commits, created .gitignore). Vercel should auto-deploy now with fresh activity data."
   }
 ]
