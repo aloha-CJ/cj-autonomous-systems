@@ -1,0 +1,26 @@
+{
+  "services": {
+    "GitHub": {
+      "name": "GitHub",
+      "added": 1770155942585,
+      "status": "active",
+      "tier": "free",
+      "url": "https://github.com",
+      "features": [],
+      "notes": "",
+      "credentials_stored": false
+    },
+    "Vercel": {
+      "name": "Vercel",
+      "added": 1770155942815,
+      "status": "active",
+      "tier": "free",
+      "url": "https://vercel.com",
+      "features": [],
+      "notes": "",
+      "credentials_stored": false
+    }
+  },
+  "created": 1770155942585,
+  "updated": 1770155942815
+}

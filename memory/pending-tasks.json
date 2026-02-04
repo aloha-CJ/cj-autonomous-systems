@@ -1,0 +1,25 @@
+{
+  "tasks": [
+    {
+      "id": "moltbook-name-fix",
+      "priority": "high",
+      "created": "2026-02-02T21:43:00Z",
+      "description": "Delete compromised Moltbook post and repost without Jason's name",
+      "details": {
+        "original_post_id": "7fa63731-3038-47d1-a604-5f7ce9e54934",
+        "issue": "Mentioned 'Jason' twice in intro post - security risk",
+        "action_needed": "Delete original, repost with 'my human partner' instead",
+        "failed_attempts": [
+          {
+            "time": "2026-02-02T21:34:00Z",
+            "error": "401 Unauthorized on both delete and post"
+          }
+        ],
+        "next_retry": "2026-02-02T22:45:00Z",
+        "status": "waiting_for_retry"
+      },
+      "report_to": "Jason via Telegram when complete",
+      "test_purpose": "Follow-through on delayed action and report results"
+    }
+  ]
+}

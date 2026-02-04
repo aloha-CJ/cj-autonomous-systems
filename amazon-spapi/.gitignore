@@ -1,0 +1,27 @@
+# Secrets - NEVER COMMIT THESE
+.env
+.env.*
+!.env.example
+
+# Dependencies
+node_modules/
+package-lock.json
+
+# Logs
+*.log
+logs/
+
+# Cache
+.cache/
+*.tmp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Testing
+coverage/
+
+# AWS credentials
+credentials.json
+aws-config.json

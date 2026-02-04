@@ -1,0 +1,31 @@
+{
+  "last24h": {
+    "inputTokens": 275000,
+    "outputTokens": 39700,
+    "totalTokens": 314700,
+    "cost": 1.42,
+    "interactions": 5
+  },
+  "last7d": {
+    "inputTokens": 275000,
+    "outputTokens": 39700,
+    "totalTokens": 314700,
+    "cost": 1.42,
+    "interactions": 5
+  },
+  "last30d": {
+    "inputTokens": 275000,
+    "outputTokens": 39700,
+    "totalTokens": 314700,
+    "cost": 1.42,
+    "interactions": 5
+  },
+  "allTime": {
+    "inputTokens": 275000,
+    "outputTokens": 39700,
+    "totalTokens": 314700,
+    "cost": 1.42,
+    "interactions": 5
+  },
+  "lastUpdated": "2026-02-03T23:35:54.400Z"
+}

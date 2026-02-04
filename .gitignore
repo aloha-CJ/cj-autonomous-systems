@@ -1,0 +1,21 @@
+# Credentials and secrets
+services/.credentials-cj.json
+services/.github-token
+amazon-spapi/.env
+**/*.env
+
+# Node modules
+node_modules/
+**/node_modules/
+
+# Logs
+*.log
+logs/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/

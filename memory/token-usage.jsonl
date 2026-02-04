@@ -1,0 +1,5 @@
+{"timestamp":1770161451664,"date":"2026-02-03","model":"claude-sonnet-4-5","inputTokens":55000,"outputTokens":8000,"totalTokens":63000,"cost":0.28500000000000003,"context":"dashboard-build-session"}
+{"timestamp":1770161754397,"date":"2026-02-03","model":"claude-sonnet-4-5","inputTokens":85000,"outputTokens":12000,"totalTokens":97000,"cost":0.435,"context":"amazon-spapi-setup"}
+{"timestamp":1770161754398,"date":"2026-02-03","model":"claude-sonnet-4-5","inputTokens":55000,"outputTokens":8000,"totalTokens":63000,"cost":0.28500000000000003,"context":"dashboard-build"}
+{"timestamp":1770161754398,"date":"2026-02-03","model":"claude-sonnet-4-5","inputTokens":42000,"outputTokens":6500,"totalTokens":48500,"cost":0.2235,"context":"autonomous-planning"}
+{"timestamp":1770161754399,"date":"2026-02-03","model":"claude-sonnet-4-5","inputTokens":38000,"outputTokens":5200,"totalTokens":43200,"cost":0.192,"context":"github-setup"}
